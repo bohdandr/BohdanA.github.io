@@ -1,5 +1,5 @@
 body {
-  background-color: #f8f9fa;
+  background-image: url("../images/why.jpg");
   text-align: center;
 }
 
@@ -15,11 +15,44 @@ h1 {
   border: none;
   border-radius: 0.25rem;
   font-size: 1.2rem;
-  background-color: #007bff;
+  background-color: #ff0000;
   color: white;
   text-decoration: none;
 }
 .button:hover {
-  background-color: #0062cc;
+  background-color: #E50000;
   cursor: pointer;
+}
+
+form {
+  max-width: 400px;
+  display: flex;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #346ea0;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: rgba(53, 63, 62, 0.7294117647);
+}
+form .form-group {
+  margin-bottom: 1rem;
+}
+form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #346ea0;
+}
+form .form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #346ea0;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
 }

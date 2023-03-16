@@ -1,8 +1,82 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .users-listing {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 2rem;
+}
+
+body {
+  background-image: url("../images/why.jpg");
+}
+
+.header {
+  background-color: rgba(38, 33, 124, 0.389);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-top: 15px;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn2 {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn2:hover {
+  transform: scale(1.05);
+}
+
+.navbar__logo {
+  font-size: 22px;
+  font-family: cursive;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .user {
@@ -78,6 +152,17 @@
 .user .content-button:hover {
   background-color: #0069d9;
 }
+.user .object-edit {
+  background-color: #ffb805;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.user .object-edit:hover {
+  background-color: #e5dd43;
+}
 .user .object-info {
   display: none;
   position: fixed;
@@ -94,6 +179,73 @@
 .user .object-info p {
   margin: 0;
 }
+.user .object-notification-error {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+.user .object-notification-error p {
+  margin: 0;
+}
+.user form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+.user form h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #007bff;
+}
+.user form .form-edition {
+  margin-bottom: 1rem;
+}
+.user form .form-edition label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+.user form .form-edition input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+}
+.user .form-container:hover .error-container, .user .form-container:focus-within .error-container {
+  display: block;
+}
+.user .error-container {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+}
+.user .form-button::after {
+  content: attr(data-error-message);
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  display: none;
+  color: red;
+  font-weight: bold;
+}
 .user .content-button:focus + .object-info {
+  display: block;
+}
+.user .object-edit:focus + .object-notification-error {
   display: block;
 }

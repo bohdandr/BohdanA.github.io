@@ -1,3 +1,8 @@
+body {
+    background-image: url('../images/why.jpg');
+}
+
+
 .user-dialog {
     position: absolute;
     top: 50%;
@@ -76,11 +81,40 @@
                     margin-left: 1rem;
 
                     &.btn-primary {
+                        display: inline-block;
+                        margin-top: 2rem;
+                        padding: 0.5rem 1rem;
+                        border: none;
+                        border-radius: 0.25rem;
+                        font-size: 1.2rem;
                         background-color: #007bff;
-                        color: #fff;
+                        color: white;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+
+                        &:hover {
+                            background-color: darken(#007bff, 10%);
+                            cursor: pointer;
+                        }
                     }
 
                     &.btn-secondary {
+                        display: inline-block;
+                        margin-top: 2rem;
+                        padding: 0.5rem 1rem;
+                        border: none;
+                        border-radius: 0.25rem;
+                        font-size: 1.2rem;
+                        color: white;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+
+                        &:hover {
+                            background-color: darken(#ec535375, 10%);
+                            cursor: pointer;
+                        }
                         background-color: #f8f9fa;
                         color: #212529;
                     }
@@ -93,3 +127,4 @@
         }
     }
 }
+

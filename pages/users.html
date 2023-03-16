@@ -9,39 +9,78 @@
 </head>
 
 <body>
-    <div class="users-listing">
-        <div class="user admin">
-            <div class="user-id">1</div>
-            <div class="user-info">
-                <h2 class="user-name">Admin User</h2>
-                <div class="user-email">admin@example.com</div>
-                <div class="user-type">Admin</div>
-                <!-- <a href="user_info.html" class="button">Logout</a> -->
-                <button class="content-button" data-info="Object Information">
-                    View Object Information
-                </button>
-                <div class="object-info">
-                    <button class="close-btn">&times;</button>
-                    <p>Admin User<br>admin@example.com<br>Admin</p>
-                </div>
-            </div>
-        </div>
-        <div class="user regular">
-            <div class="user-id">2</div>
-            <div class="user-info">
-                <h2 class="user-name">Regular User</h2>
-                <div class="user-email">user@example.com</div>
-                <div class="user-type">Regular</div>
-                <button class="content-button" data-info="Object Information">
-                    View Object Information
-                </button>
-                <div class="object-info">
-                    <button class="close-btn">&times;</button>
-                    <p>Regular User<br>user@example.com<br>Regular</p>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar"><a href="index.html" class="navbar__logo">MoneyTransfer</a></nav>
+            <nav class="nav">
+                <ul>
+                    <li class="btn"><a href="#">Home</a></li>
+                    <li class="btn"><a href="#">About</a></li>
+                    <li class="btn"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="nav">
+                <ul>
+                    <li class="btn2"><a href="login.html">Login</a></li>
+                    <li class="btn2"><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="users-listing">
+                <div class="user admin">
+                    <div class="user-info">
+                        <h2 class="user-name">Admin User</h2>
+                        <div class="user-email">admin@example.com</div>
+                        <div class="user-type">Admin</div>
+                        <!-- <a href="user_info.html" class="button">Logout</a> -->
+                        <div>
+                            <button class="content-button" data-info="Object Information">
+                                View Object Information
+                            </button>
+                            <div class="object-info">
+                                <button class="close-btn">&times;</button>
+                                <p>Admin User<br>admin@example.com<br>Admin</p>
+                            </div>
 
+                            <button class="object-edit" data-info="Edit Object">
+                                Edit
+                            </button>
+                            <div class="object-notification-error">
+                                <button class="close-btn">&times;</button>
+                                <p>You are not able to change user information</p>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="user regular">
+                    <div class="user-info">
+                        <h2 class="user-name">Regular User</h2>
+                        <div class="user-email">user@example.com</div>
+                        <div class="user-type">Regular</div>
+                        <div>
+                            <button class="content-button" data-info="Object Information">
+                                View Object Information
+                            </button>
+                            <div class="object-info">
+                                <button class="close-btn">&times;</button>
+                                <p>Regular User<br>user@example.com<br>Regular</p>
+                            </div>
+                            <button class="object-edit" data-info="Edit Object">
+                                Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
 </body>
 

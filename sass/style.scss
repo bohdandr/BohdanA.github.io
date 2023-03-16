@@ -5,7 +5,9 @@
 }
 
 .header {
+  // background-image: url("../images/header2.png");
   background-color: rgba(38, 33, 124, 0.389);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 15px;
   border-radius: 25px;
   color: #fff;
@@ -22,6 +24,7 @@
   align-items: center;
 }
 
+
 .btn {
   color: #fff;
   font-size: 16px;
@@ -29,7 +32,19 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.15s ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn2 {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
   &:hover {
     transform: scale(1.05);
   }
@@ -67,7 +82,7 @@
 
 .navbar__logo {
   font-size: 22px;
-  font-family: 'Open Sans', sans-serif;
+  font-family:cursive;
 }
 
 .card-container {
@@ -76,12 +91,14 @@
   margin-top: 70px;
 
   .card {
+    background-color: #4399ce;
     width: 20%;
-    border: 2px solid #ccc;
+    border: 2px solid rgba(104, 54, 230, 0.705);
     padding: 50px;
     text-align: center;
     margin-left: 40px;
     margin-right: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     img {
       height: 200px;
@@ -129,8 +146,38 @@ body {
   background-image: url('../images/why.jpg');
 }
 
-footer {
-  background-color: #25496d;
-  padding: 1rem;
+h2{
+  font-family: 'Courier New', monospace;
+  padding-top: 16px;
+  line-height: 1.7;
+  color: rgb(52, 79, 167);
   text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+
+h4{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(161, 223, 226);
+}
+
+footer {
+  background-color: rgba(38, 33, 124, 0.532);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

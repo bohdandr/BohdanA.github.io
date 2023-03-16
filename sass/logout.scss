@@ -1,7 +1,9 @@
-$primary-color: #007bff;
+$primary-color: #353f3eba;
+$secondary-color: #346ea0;
+$additional-color: #ff0000;
 
 body {
-  background-color: #f8f9fa;
+  background-image: url('../images/why.jpg');
   text-align: center;
 }
 
@@ -17,11 +19,47 @@ h1 {
   border: none;
   border-radius: 0.25rem;
   font-size: 1.2rem;
-  background-color: $primary-color;
+  background-color: $additional-color;
   color: white;
   text-decoration: none;
   &:hover {
-    background-color: darken($primary-color, 10%);
-    cursor: pointer;
+    background-color: #E50000;
+    cursor:pointer;
   }
 }
+
+form {
+  max-width: 400px;
+  display: flex;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid $secondary-color;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $primary-color;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $secondary-color;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid $secondary-color;
+      border-radius: 0.25rem;
+      font-size: 1.2rem;
+    }
+  }
+ 
+}
+
