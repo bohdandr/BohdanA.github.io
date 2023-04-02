@@ -1,0 +1,128 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  background-image: url("../images/why.jpg");
+}
+
+.header {
+  background-color: rgba(38, 33, 124, 0.389);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-top: 15px;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn2 {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn2:hover {
+  transform: scale(1.05);
+}
+
+.navbar__logo {
+  font-size: 22px;
+  font-family: cursive;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-container {
+  margin-top: 80px;
+}
+
+.send-money-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.send-money-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+}
+.send-money-form .form-row {
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.send-money-form .form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #555;
+}
+.send-money-form .form-row input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.send-money-form .form-row input[type=text]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.send-money-form button[type=submit] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+.send-money-form button[type=submit]:hover {
+  background-color: #0069d9;
+}

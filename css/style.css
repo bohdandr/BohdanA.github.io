@@ -1,0 +1,177 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: rgba(38, 33, 124, 0.389);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-top: 15px;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn2 {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+.btn2:hover {
+  transform: scale(1.05);
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #007BFF;
+}
+
+.title-text {
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 1rem;
+  letter-spacing: -0.25rem;
+  -webkit-animation: title-animation 1s ease-in-out infinite alternate;
+          animation: title-animation 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes title-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15rem);
+  }
+}
+
+@keyframes title-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15rem);
+  }
+}
+.navbar__logo {
+  font-size: 22px;
+  font-family: cursive;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.card-container .card {
+  background-color: #4399ce;
+  width: 20%;
+  border: 2px solid rgba(104, 54, 230, 0.705);
+  padding: 50px;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-container .card img {
+  height: 200px;
+  width: 200px;
+}
+.card-container .card h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.card-container .card p {
+  font-size: 16px;
+  color: #777;
+}
+.card-container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.card-container .card:not(:hover) {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  background-image: url("../images/why.jpg");
+}
+
+h2 {
+  font-family: "Courier New", monospace;
+  padding-top: 16px;
+  line-height: 1.7;
+  color: rgb(52, 79, 167);
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+h4 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(161, 223, 226);
+}
+
+footer {
+  background-color: rgba(38, 33, 124, 0.532);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
