@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dialog.css">
+    <script src="../js/dialog.js"></script>
     <title>Document</title>
 </head>
 
@@ -16,32 +17,65 @@
                 <h2>Create User Dialog</h2>
             </div>
             <div class="dialog-body">
-                <form>
+                <form class="create-user-form" id="create-user-form">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
+                        <input type="text" id="username" name="username" required minlength="5" maxlength="20"
+                            pattern="[a-zA-Z][a-zA-Z\d\.-_]{4,120}$"
+                            title="Username must be between 5 and 20 characters and contain only letters and numbers."
+                            class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required minlength="2" maxlength="20"
+                            pattern="[A-Za-z]+"
+                            title="firstName must be between 2 and 20 characters and contain only letters."
+                            class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required minlength="2" maxlength="20"
+                            pattern="[A-Za-z]+" title="lastName must be between 2 and 20 characters and contain only letters."
+                            class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="role">Role</label>
-                        <select id="role" name="role" required>
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" id="email" name="email" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address."
+                            class="input-field" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-group">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8"
+                        title="password must contain at least 8 characters"
+                        class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-group">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8"
+                        title="password must contain at least 8 characters"
+                        class="input-field">
+                    </div>
+                    <!-- <label for="phone" class="input-label">Phone</label>
+                    <input type="tel" id="phone" name="phone" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[\s0-9]{4,20}$"
+                        class="input-field" />
+                    <label for="birthDate" class="input-label">Birth Date</label>
+                    <input type="date" id="birthDate" name="birthDate" class="input-field" /> -->
+                    <div class="form-group">
+                        <label for="isAdmin">Role</label>
+                        <select id="isAdmin" name="isAdmin" required>
                             <option value="">--Select Role--</option>
-                            <option value="admin">Admin</option>
-                            <option value="regular">Regular</option>
+                            <option value="0">regular</option>
+                            <option value="1">admin</option>
                         </select>
                     </div>
-                    <div class="buttons">
-                        <a href="index.html" type="submit" class="btn btn-primary">Ok</a>
-                        <a href="index.html" type="submit" class="btn btn-secondary">Cancel</a>
-                    </div>
                 </form>
+
+                <div class="buttons">
+                    <a  type="submit" class="btn btn-primary" id="create-user-button">Ok</a>
+                    <a href="index.html" type="submit" class="btn btn-secondary">Cancel</a>
+                </div>
+
             </div>
         </div>
     </div>
