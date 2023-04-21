@@ -4,22 +4,23 @@
 <head>
   <title>Login Page</title>
   <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/login.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <form>
+    <form id="login-form">
       <h1>Login</h1>
       <div class="form-group">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" minlength="3" maxlength="20" required>
+        <input type="text" id="username" name="username" required pattern="[a-zA-Z0-9]+" minlength="3" maxlength="20" class="input-field">
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" id="password" maxlength="25" pattern="[a-zA-Z0-9]+" name="password" required>
+        <input type="password" id="password" name="password" required maxlength="25" pattern="[a-zA-Z0-9]+" class="input-field">
       </div>
-      <a href="index.html" type="submit" class="button">Login</a>
     </form>
+    <button type="submit" class="button" id="login-button">Login</button>
   </div>
 </body>
 

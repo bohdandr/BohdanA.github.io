@@ -4,6 +4,7 @@
 <head>
     <title>Logout Page</title>
     <link rel="stylesheet" href="../css/sendingMoney.css">
+    <script src="../js/sendingMoney.js"></script>
 </head>
 
 <body>
@@ -26,28 +27,28 @@
         </header>
         <main>
             <div class="main-container">
-                <form class="send-money-form">
+                <form class="send-money-form" id="send-money-form">
                     <h2>Send Money</h2>
 
                     <div class="form-row">
-                        <label for="sender-card">Sender's Card Number:</label>
-                        <input type="text" id="sender-card" name="sender-card">
+                        <label for="sentByUser">Sender's username:</label>
+                        <input type="number" id="sentByUser" name="sentByUser">
                     </div>
 
                     <div class="form-row">
-                        <label for="receiver-card">Receiver's Card Number:</label>
-                        <input type="text" id="receiver-card" name="receiver-card">
+                        <label for="sentToUser">Receiver's username:</label>
+                        <input type="number" id="sentToUser" name="sentToUser">
                     </div>
 
                     <div class="form-row">
-                        <label for="amount">Amount:</label>
-                        <input type="text" id="amount" name="amount">
+                        <label for="value">Value:</label>
+                        <input type="number" id="value" name="value">
                     </div>
 
-                    <div class="form-row">
-                        <button type="submit">Send Money</button>
-                    </div>
                 </form>
+                <div class="form-row">
+                    <button type="submit" id="send-money-button">Send Money</button>
+                </div>
 
             </div>
 
