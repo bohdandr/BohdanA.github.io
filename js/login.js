@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const json = await response.json();
             sessionStorage.setItem('Authorization', `Basic ${encodedCredentials}`);
             alert(json.message);
-            window.location.href = './user_info.html';
+            window.location.href = './index.html';
         }
         catch (error) {
             alert('Invalid username or password');
