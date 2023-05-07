@@ -1,0 +1,22 @@
+
+
+
+footer {
+    background-color: rgba(38, 33, 124, 0.532);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
