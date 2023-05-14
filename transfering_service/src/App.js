@@ -13,6 +13,7 @@ import Wallet from "./Pages/myWallet"
 import SendingMoney from "./Pages/sendingMoney"
 import PrivateRoute from "./Pages/PrivateRoute"
 import ResetPassword from "./Pages/ResetPassword"
+import Profile from "./Pages/Profile"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/mywallet"  element={<PrivateRoute> <Wallet/> </PrivateRoute>} />
           <Route path="/sendingMoney" element={<PrivateRoute> <SendingMoney /> </PrivateRoute>} />
           <Route path="/forgot-password" element={<ResetPassword />} />
+          <Route path="/profile" element={<Profile />} />
 
           {/* <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />} /> */}
         </Routes>

@@ -33,15 +33,6 @@ form {
 
   .form-group{
     margin-bottom: 1rem;
-
-    a {
-      color: $primary-color;
-      font-size: 1rem;
-      text-align: center;
-      display: block;
-      margin-top: 1rem;
-    }
-
     label {
       display: block;
       margin-bottom: 0.5rem;
@@ -57,6 +48,14 @@ form {
     }
   }
   
+}
+
+.forgot-password-link {
+  color: $primary-color;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
 }
 
 
