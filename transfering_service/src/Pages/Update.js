@@ -18,7 +18,8 @@ class Update extends Component {
     componentDidMount() {
         const token = sessionStorage.getItem('Authorization');
         if (!token) {
-            this.props.history.push('/login');
+            // this.props.history.push('/login');
+            window.location.href = './login';
         }
         axios.get(`http://localhost:5000/api/v1/user/self`, {
             headers: {
@@ -49,6 +50,9 @@ class Update extends Component {
         event.preventDefault();
         const token = sessionStorage.getItem('Authorization');
         const { firstName, lastName } = this.state;
+        if (!token) {
+            this.props.history.push('/login');
+        }
         axios.put(`http://localhost:5000/api/v1/user/self`, { firstName, lastName }, {
             headers: {
                 Authorization: token
@@ -70,6 +74,9 @@ class Update extends Component {
     handleDelete(event) {
         event.preventDefault();
         const token = sessionStorage.getItem('Authorization');
+        if (!token) {
+            this.props.history.push('/login');
+        }
         axios.delete(`http://localhost:5000/api/v1/user/self`, {
             headers: {
                 Authorization: token

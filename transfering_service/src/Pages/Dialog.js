@@ -70,6 +70,7 @@ export default class Dialog extends Component {
             } else {
                 alert("User successfully created");
             }
+            window.location.href = './';
         } catch (error) {
             console.error(error);
             alert("An error occurred while creating user");
@@ -89,7 +90,8 @@ export default class Dialog extends Component {
 
 
         return (
-            <div className="user-dialog">
+            <div class="container">
+
                 <div className="dialog-header">
                     <h2>Create User Dialog</h2>
                 </div>
@@ -204,17 +206,18 @@ export default class Dialog extends Component {
                                 <option value="1">Admin</option>
                             </select>
                         </div>
-                        <div className="buttons">
-                            <button type="submit" className="btn btn-primary">
-                                Create
-                            </button>
-                            <button type="button" className="btn btn-secondary">
-                                Cancel
-                            </button>
-                        </div>
+
+                        <button type="submit" className="btn btn-primary">
+                            Create
+                        </button>
+                        <button type="button" className="btn btn-secondary">
+                            Cancel
+                        </button>
+
                     </form>
                 </div>
             </div>
+
         )
     }
 }

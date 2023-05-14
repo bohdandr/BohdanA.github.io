@@ -26,7 +26,7 @@ export default class Home extends Component {
                 </a>
               </div>
               <div className="card">
-                <a href="sendingMoney.html">
+                <a href="/sendingMoney">
                   <img src={money_transfering} alt="Card 3"/>
                   <h2>Send Money</h2>
                   <h4>Make a transaction</h4>

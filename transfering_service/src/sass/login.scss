@@ -14,14 +14,34 @@ form {
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: white;
+  
   h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
     color: $primary-color;
   }
-  .form-group {
+
+  .forgot-password-link {
+    color: $primary-color;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+  }
+
+
+  .form-group{
     margin-bottom: 1rem;
+
+    a {
+      color: $primary-color;
+      font-size: 1rem;
+      text-align: center;
+      display: block;
+      margin-top: 1rem;
+    }
+
     label {
       display: block;
       margin-bottom: 0.5rem;
@@ -36,8 +56,9 @@ form {
       font-size: 1.2rem;
     }
   }
- 
+  
 }
+
 
 .button {
   display: inline-block;
@@ -56,3 +77,4 @@ form {
     cursor: pointer;
   }
 }
+

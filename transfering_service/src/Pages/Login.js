@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import "../sass/contact.scss"
-import { useState } from 'react';
 
 
 export default class Login extends Component {
@@ -25,11 +24,11 @@ export default class Login extends Component {
 
     async handleSubmit(event) {
         event.preventDefault();
-    
+
         const { username, password } = this.state;
         const credentials = `${username}:${password}`;
         const encodedCredentials = btoa(credentials);
-    
+
         const options = {
             method: 'GET',
             headers: {
@@ -37,13 +36,13 @@ export default class Login extends Component {
                 Authorization: `Basic ${encodedCredentials}`,
             }
         };
-    
+
         try {
             const response = await fetch(`http://127.0.0.1:5000/api/v1/user_login`, options);
             const json = await response.json();
-            sessionStorage.setItem('Authorization', `Basic ${encodedCredentials}`); 
+            sessionStorage.setItem('Authorization', `Basic ${encodedCredentials}`);
             alert(json.message);
-            window.location.href = './index.html';
+            window.location.href = './';
         } catch (error) {
             alert('Invalid username or password');
         }
@@ -53,7 +52,7 @@ export default class Login extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="username">Username or Email</label>
                     <input type="text" id="username" name="username" value={this.state.username} onChange={this.handleUsernameChange} required className="input-field" />
                 </div>
                 <div className="form-group">
@@ -61,6 +60,9 @@ export default class Login extends Component {
                     <input type="password" id="password" name="password" value={this.state.password} onChange={this.handlePasswordChange} required className="input-field" />
                 </div>
                 <button type="submit" className="btn btn-primary" id="login-button">Login</button>
+                <button className="form-group">
+                    <a href="/forgot-password">Forgot Password?</a>
+                </button>
             </form>
         )
     }

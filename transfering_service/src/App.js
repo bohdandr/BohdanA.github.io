@@ -10,6 +10,9 @@ import Login from "./Pages/Login"
 import Update from "./Pages/Update"
 import Logout from "./Pages/Logout"
 import Wallet from "./Pages/myWallet"
+import SendingMoney from "./Pages/sendingMoney"
+import PrivateRoute from "./Pages/PrivateRoute"
+import ResetPassword from "./Pages/ResetPassword"
 
 function App() {
   return (
@@ -21,13 +24,14 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/dialog" element={<Dialog />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/update" element={<Update />} />
+          <Route path="/update" element={<PrivateRoute> <Update/> </PrivateRoute>} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/mywallet" element={<Wallet />} />
+          <Route path="/mywallet"  element={<PrivateRoute> <Wallet/> </PrivateRoute>} />
+          <Route path="/sendingMoney" element={<PrivateRoute> <SendingMoney /> </PrivateRoute>} />
+          <Route path="/forgot-password" element={<ResetPassword />} />
 
           {/* <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />} /> */}
         </Routes>
-        
         <Footer />
       </Router>
     </>

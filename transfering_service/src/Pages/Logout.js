@@ -4,19 +4,21 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import '../sass/logout.scss';
 
-const LogoutButton = () => {
+class LogoutButton extends React.Component {
+  handleLogout = () => {
+    // Remove the authentication token from sessionStorage
+    sessionStorage.removeItem('authToken');
 
-    const handleLogout = () => {
-      sessionStorage.removeItem('token');
-      console.log(sessionStorage.getItem('token'))
-    //   window.location.href = '/login';
-    };
-  
+    // Redirect the user to the login page
+    const { history } = this.props;
+    history.push('/login');
+  }
+
+  render() {
     return (
-      <button className="logout-button" onClick={handleLogout}>
-        Logout
-      </button>
+      <button onClick={this.handleLogout}>Logout</button>
     );
-  };
+  }
+}
 
 export default LogoutButton;
