@@ -1,24 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import "../sass/header.scss"
 
 function Header() {
     const token = sessionStorage.getItem('Authorization');
     if (!token) {
         return (
-            <nav class="container">
-                <header class="header">
-                    <nav class="navbar"><a href="/" class="navbar__logo">MoneyTransfer</a></nav>
-                    <nav class="nav">
+            <nav className="container">
+                <header className="header">
+                    <nav className="navbar"><a href="/" className="navbar__logo">MoneyTransfer</a></nav>
+                    <nav className="nav">
                         <ul>
-                            <li class="btn"><a href="/">Home</a></li>
-                            <li class="btn"><a href="/dialog">User Dialog</a></li>
-                            <li class="btn"><a href="/contact">Contact</a></li>
+                            <li className="btn"><a href="/">Home</a></li>
+                            <li className="btn"><a href="/dialog">User Dialog</a></li>
+                            <li className="btn"><a href="/contact">Contact</a></li>
                         </ul>
                     </nav>
-                    <nav class="nav">
+                    <nav className="nav">
                         <ul>
-                            <li class="btn2"><a href="/login">Login</a></li>
+                            <li className="btn2"><a href="/login">Login</a></li>
                         </ul>
                     </nav>
 
@@ -28,20 +27,20 @@ function Header() {
     }
     else {
         return (
-            <nav class="container">
-                <header class="header">
-                    <nav class="navbar"><a href="/" class="navbar__logo">MoneyTransfer</a></nav>
-                    <nav class="nav">
+            <nav className="container">
+                <header className="header">
+                    <nav className="navbar"><a href="/" className="navbar__logo">MoneyTransfer</a></nav>
+                    <nav className="nav">
                         <ul>
-                            <li class="btn"><a href="/">Home</a></li>
-                            <li class="btn"><a href="/dialog">User Dialog</a></li>
-                            <li class="btn"><a href="/contact">Contact</a></li>
+                            <li className="btn"><a href="/">Home</a></li>
+                            <li className="btn"><a href="/dialog">User Dialog</a></li>
+                            <li className="btn"><a href="/contact">Contact</a></li>
                         </ul>
                     </nav>
-                    <nav class="nav">
+                    <nav className="nav">
                         <ul>
-                            <li class="btn2"><a href="/profile">Profile</a></li>
-                            <li class="btn2"><a href="/logout">Logout</a></li>
+                            <li className="btn2"><a href="/profile">Profile</a></li>
+                            <li className="btn2"><a href="/logout">Logout</a></li>
                         </ul>
                     </nav>
 

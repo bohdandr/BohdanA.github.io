@@ -13,6 +13,7 @@ export default class Dialog extends Component {
             password: "",
             confirmPassword: "",
             isAdmin: "",
+            successMessage: "",                                            //---
         };
     }
 
@@ -68,7 +69,7 @@ export default class Dialog extends Component {
             if (json.code !== 200) {
                 alert(json.error);
             } else {
-                alert("User successfully created");
+                this.setState({ successMessage: "User_successfully_created" });                //---
             }
             window.location.href = './';
         } catch (error) {
@@ -88,9 +89,11 @@ export default class Dialog extends Component {
             isAdmin
         } = this.state;
 
+        const { successMessage } = this.state;                                    //---
+
 
         return (
-            <div class="container">
+            <div className="container">
 
                 <div className="dialog-header">
                     <h2>Create User Dialog</h2>
@@ -172,6 +175,7 @@ export default class Dialog extends Component {
                                 className="input-field"
                                 value={password}
                                 onChange={this.handleInputChange}
+                                data-testid="password-input"
                             />
                         </div>
 
@@ -189,6 +193,7 @@ export default class Dialog extends Component {
                                 className="input-field"
                                 value={confirmPassword}
                                 onChange={this.handleInputChange}
+                                data-testid="confirm-password-input"
                             />
                         </div>
 
@@ -207,9 +212,10 @@ export default class Dialog extends Component {
                             </select>
                         </div>
 
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary" data-testid="create_button">
                             Create
                         </button>
+                        {successMessage && <div>{successMessage}</div>}                     //---
                         <button type="button" className="btn btn-secondary">
                             Cancel
                         </button>

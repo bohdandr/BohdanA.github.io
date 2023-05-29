@@ -7,7 +7,8 @@ class Update extends Component {
         super(props);
         this.state = {
             firstName: '',
-            lastName: ''
+            lastName: '',
+            successMessage: ''                                                        //---
         };
         this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -20,6 +21,7 @@ class Update extends Component {
         if (!token) {
             // this.props.history.push('/login');
             window.location.href = './login';
+            return;
         }
         axios.get(`http://localhost:5000/api/v1/user/self`, {
             headers: {
@@ -59,7 +61,9 @@ class Update extends Component {
             }
         })
             .then(response => {
-                alert("User information successfully updated");
+                this.setState({
+                    successMessage: "User information successfully updated",                               //---
+                  });
                 this.props.history.push('/');
             })
             .catch(error => {
@@ -96,6 +100,7 @@ class Update extends Component {
     }
 
     render() {
+        const { successMessage } = this.state;
         return (
             <>
                 <form onSubmit={this.handleUpdateSubmit}>
@@ -112,6 +117,7 @@ class Update extends Component {
                 <form onSubmit={this.handleDelete}>
                     <button type="submit" className="btn btn-primary" id="delete-button">Delete</button>
                 </form>
+                {successMessage && <div>{successMessage}</div>}
 
             </>
         );

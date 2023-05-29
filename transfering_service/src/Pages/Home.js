@@ -3,7 +3,7 @@ import "../sass/style.scss"
 import users from "../images/users.png"
 import wallet from "../images/wallet3.gif"
 import money_transfering from "../images/money_transfering3.gif"
-import { Col, Container, Row } from 'react-bootstrap';
+
 
 export default class Home extends Component {
   render() {

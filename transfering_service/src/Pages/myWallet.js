@@ -8,7 +8,8 @@ export default class myWallet extends Component {
         this.state = {
             wallet: '',
             valueWithdrawal: '',
-            valueReplenishment: ''
+            valueReplenishment: '',
+            successMessage: "",                                            //---
         };
         this.handleWithdrawalChange = this.handleWithdrawalChange.bind(this);
         this.handleReplenishmentChange = this.handleReplenishmentChange.bind(this);
@@ -19,7 +20,8 @@ export default class myWallet extends Component {
     componentDidMount() {
         const token = sessionStorage.getItem('Authorization');
         if (!token) {
-            this.props.history.push('/login');
+            // this.props.history.push('/login');
+            window.location.href = './login';
         }
         axios.get(`http://localhost:5000/api/v1/user/wallet/self`, {
             headers: {
@@ -50,7 +52,8 @@ export default class myWallet extends Component {
         event.preventDefault();
         const token = sessionStorage.getItem('Authorization');
         if (!token) {
-            this.props.history.push('/login');
+            // this.props.history.push('/login');
+            window.location.href = './login';
         }
         const { valueWithdrawal } = this.state;
         axios.put(`http://localhost:5000/api/v1/user/withdraw`, { valueWithdrawal }, {
@@ -59,7 +62,8 @@ export default class myWallet extends Component {
             }
         })
             .then(response => {
-                alert("Your withdrawal is successfully finished");
+                // alert("Your withdrawal is successfully finished");
+                this.setState({ successMessage:"Your_withdrawal_is_successfully_finished"});                      //---
                 // this.props.history.push('./mywallet');
                 window.location.href = '/mywallet';
             })
@@ -73,7 +77,8 @@ export default class myWallet extends Component {
         event.preventDefault();
         const token = sessionStorage.getItem('Authorization');
         if (!token) {
-            this.props.history.push('/login');
+            // this.props.history.push('/login');
+            window.location.href = './login';
         }
         const { valueReplenishment } = this.state;
         console.log(valueReplenishment)
@@ -93,6 +98,9 @@ export default class myWallet extends Component {
     }
 
     render() {
+
+        const { successMessage } = this.state;
+
         return (
             <div className="user-bank-cabinet">
                 <h1 className="user-bank-cabinet__title">Bank Account Information</h1>
@@ -104,9 +112,10 @@ export default class myWallet extends Component {
                             <form onSubmit={this.handleWithdrawalSubmit} className="form-wrapper">
                                 <label>
                                     Withdrawal amount:
-                                    <input type="number" value={this.state.valueWithdrawal} onChange={this.handleWithdrawalChange} />
+                                    <input type="number" value={this.state.valueWithdrawal} onChange={this.handleWithdrawalChange} data-testid="withdrawal" />
                                 </label>
-                                <button type="submit">Withdraw</button>
+                                <button data-testid="withdraw" type="submit">Withdraw</button>
+                                {successMessage && <div>{successMessage}</div>}                     //---
                             </form>
                         </div>
                         <div className="form-wrapper">

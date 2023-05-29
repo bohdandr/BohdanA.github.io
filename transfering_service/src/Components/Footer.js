@@ -6,7 +6,7 @@ function Header() {
     return (
 
         <footer>
-            <div class="container">
+            <div className="container">
                 <p>&copy;Money Transfer Organization</p>
             </div>
         </footer>
