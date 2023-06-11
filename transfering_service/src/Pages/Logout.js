@@ -12,6 +12,7 @@ class LogoutButton extends React.Component {
     // Redirect the user to the login page
     const { history } = this.props;
     // history.push('/login');
+    window.location.href = './';
   }
 
   render() {
